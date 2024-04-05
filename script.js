@@ -1,4 +1,4 @@
-// const playerChoice = prompt("Rock, Paper or Scissor").toLowerCase();
+const playerChoice = prompt("Rock, Paper or Scissor").toLowerCase();
 
 function getComputerChoice() {
   const choices = ["rock", "paper", "scissor"];
@@ -6,4 +6,11 @@ function getComputerChoice() {
   return choices[randomNumber];
 }
 
-console.log(playerChoice);//
+function playRound(player, computer){
+    if(player === 'rock' && computer === 'scissor'){
+console.log('Player Wins');
+    } else if (){
+
+    }
+
+}
