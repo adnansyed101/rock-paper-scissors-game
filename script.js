@@ -1,8 +1,9 @@
+// const playerChoice = prompt("Rock, Paper or Scissor").toLowerCase();
 
 function getComputerChoice() {
-  const choices = ["Rock", "Paper", "Scissors"];
+  const choices = ["rock", "paper", "scissor"];
   const randomNumber = Math.floor(Math.random() * choices.length);
   return choices[randomNumber];
 }
 
-console.log(getComputerChoice());
+console.log(playerChoice);//
