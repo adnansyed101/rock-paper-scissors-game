@@ -40,5 +40,13 @@ function playGame() {
   playerScore.textContent = score.player;
   computerScore.textContent = score.computer;
 
+  choicesUI.innerHTML = `
+      <div class="col text-center">
+        <h3>Player Choice: ${playerChoice}</h3>
+      </div>
+      <div class="col text-center">
+        <h3>Computer Choice: ${computerChoice}</h3>
+      </div>
+      `;
  
 }
