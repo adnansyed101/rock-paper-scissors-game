@@ -4,6 +4,10 @@ const computerScore = document.querySelector("#computerScore");
 const choicesUI = document.querySelector("#choicesUI");
 const resultsUI = document.querySelector("#resultsUI");
 
+playerChoices.forEach((choice) => {
+  choice.addEventListener("click", playGame);
+});
+
 let score = { player: 0, computer: 0 };
 
 function getComputerChoice() {
@@ -30,7 +34,7 @@ function playRound(player, computer) {
   }
 }
 
-function playGame() {
+function playGame(e) {
   const computerChoice = getComputerChoice();
   const playerChoice = e.target.id;
 
