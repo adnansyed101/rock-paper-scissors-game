@@ -15,18 +15,18 @@ function getComputerChoice() {
 function playRound(player, computer) {
   if (player === "Rock" && computer === "Scissor") {
     score.player += 1;
-    return "Player Wins";
+    resultsUI.textContent = "Player Wins";
   } else if (player === "Paper" && computer === "Rock") {
     score.player += 1;
-    return "Player Wins";
+    resultsUI.textContent = "Player Wins";
   } else if (player === "Scissor" && computer === "Paper") {
     score.player += 1;
-    return "Player Wins";
+    resultsUI.textContent = "Player Wins";
   } else if (player === computer) {
-    return "Draw";
+    resultsUI.textContent = "Draw";
   } else {
     score.computer += 1;
-    return "Computer Wins";
+    resultsUI.textContent = "Computer Wins";
   }
 }
 
