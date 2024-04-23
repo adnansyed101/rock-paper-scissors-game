@@ -32,13 +32,7 @@ function playRound(player, computer) {
 }
 
 function playGame() {
-  for (let i = 1; i <= 5; i++) {
-    const playerChoice = prompt("Rock, Paper or Scissor").toLowerCase();
-    const computerChoice = getComputerChoice();
-    console.log(`Round ${i}`);
-    console.log(`Player: ${playerChoice} \t Computer: ${computerChoice}`);
-    console.log(playRound(playerChoice, computerChoice));
-  }
+
 
   if (score.player > score.computer) {
     return "Player has won the game";
