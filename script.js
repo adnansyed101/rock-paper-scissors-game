@@ -32,7 +32,13 @@ function playRound(player, computer) {
 }
 
 function playGame() {
+  const computerChoice = getComputerChoice();
+  const playerChoice = e.target.id;
 
+  playRound(playerChoice, computerChoice);
+
+  playerScore.textContent = score.player;
+  computerScore.textContent = score.computer;
 
   if (score.player > score.computer) {
     return "Player has won the game";
