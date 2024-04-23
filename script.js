@@ -40,13 +40,5 @@ function playGame() {
   playerScore.textContent = score.player;
   computerScore.textContent = score.computer;
 
-  if (score.player > score.computer) {
-    return "Player has won the game";
-  } else if (score.player < score.computer) {
-    return "Computer has won the game";
-  } else {
-    return "Draw";
-  }
+ 
 }
-
-console.log(score);
