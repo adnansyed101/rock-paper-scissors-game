@@ -1,3 +1,9 @@
+const playerChoices = document.querySelectorAll(".btn");
+const playerScore = document.querySelector("#playerScore");
+const computerScore = document.querySelector("#computerScore");
+const choicesUI = document.querySelector("#choicesUI");
+const resultsUI = document.querySelector("#resultsUI");
+
 let score = { player: 0, computer: 0 };
 console.log(playGame());
 
