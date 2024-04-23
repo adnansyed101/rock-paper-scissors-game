@@ -5,22 +5,21 @@ const choicesUI = document.querySelector("#choicesUI");
 const resultsUI = document.querySelector("#resultsUI");
 
 let score = { player: 0, computer: 0 };
-console.log(playGame());
 
 function getComputerChoice() {
-  const choices = ["rock", "paper", "scissor"];
+  const choices = ["Rock", "Paper", "Scissor"];
   const randomNumber = Math.floor(Math.random() * choices.length);
   return choices[randomNumber];
 }
 
 function playRound(player, computer) {
-  if (player === "rock" && computer === "scissor") {
+  if (player === "Rock" && computer === "Scissor") {
     score.player += 1;
     return "Player Wins";
-  } else if (player === "paper" && computer === "rock") {
+  } else if (player === "Paper" && computer === "Rock") {
     score.player += 1;
     return "Player Wins";
-  } else if (player === "scissor" && computer === "paper") {
+  } else if (player === "Scissor" && computer === "Paper") {
     score.player += 1;
     return "Player Wins";
   } else if (player === computer) {
@@ -48,5 +47,4 @@ function playGame() {
         <h3>Computer Choice: ${computerChoice}</h3>
       </div>
       `;
- 
 }
