@@ -3,6 +3,7 @@ const playerScore = document.querySelector("#playerScore");
 const computerScore = document.querySelector("#computerScore");
 const choicesUI = document.querySelector("#choicesUI");
 const resultsUI = document.querySelector("#resultsUI");
+const resetBtn = document.querySelector("#resetBtn");
 const winner = document.querySelector("#winner");
 
 playerChoices.forEach((choice) => {
@@ -49,6 +50,12 @@ function gameOver() {
   playerChoices.forEach((choice) => {
     choice.disabled = true;
   });
+  
+  const button = document.createElement("button");
+  button.setAttribute("onclick", "document.location.reload()");
+  button.textContent = "Reset";
+  button.classList = "btn btn-success";
+  resetBtn.appendChild(button);
 }
 
 function playGame(e) {
