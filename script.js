@@ -3,6 +3,7 @@ const playerScore = document.querySelector("#playerScore");
 const computerScore = document.querySelector("#computerScore");
 const choicesUI = document.querySelector("#choicesUI");
 const resultsUI = document.querySelector("#resultsUI");
+const winner = document.querySelector("#winner");
 
 playerChoices.forEach((choice) => {
   choice.addEventListener("click", playGame);
@@ -34,11 +35,29 @@ function playRound(player, computer) {
   }
 }
 
+function declareWinner() {
+  if (score.player === 5) {
+    winner.textContent = "Player has won the game";
+    gameOver();
+  } else if (score.computer === 5) {
+    winner.textContent = "Computer has won the game";
+    gameOver();
+  }
+}
+
+function gameOver() {
+  playerChoices.forEach((choice) => {
+    choice.disabled = true;
+  });
+}
+
 function playGame(e) {
   const computerChoice = getComputerChoice();
   const playerChoice = e.target.id;
 
   playRound(playerChoice, computerChoice);
+
+  declareWinner();
 
   playerScore.textContent = score.player;
   computerScore.textContent = score.computer;
